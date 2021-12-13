@@ -51,3 +51,12 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C32A826BC2884BF9922C1CB1392D1AC3 }}
           package: '*.jar'
+
+      - name: DeployV2 to Azure Web App
+        id: deploy-to-webappV2
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'padService2'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZURE_SECRET }}
+          package: '*.jar'
