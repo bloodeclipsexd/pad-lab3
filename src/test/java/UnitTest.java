@@ -9,4 +9,8 @@ public class UnitTest {
     public void contextLoads() {
         Assertions.assertEquals("10 за 3 лабу по PAD", "10 за 3 лабу по PAD");
     }
+    @Test
+    public void contextLoads2() {
+        Assertions.assertEquals("1", "1");
+    }
 }
